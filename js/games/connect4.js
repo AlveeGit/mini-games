@@ -86,6 +86,9 @@ class ConnectFour {
                 padding: 2rem;
                 border-radius: 12px;
                 box-shadow: var(--shadow);
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             .board-grid {
                 display: grid;

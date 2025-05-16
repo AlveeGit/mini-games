@@ -87,6 +87,8 @@ class TicTacToe {
             }
             .game-board {
                 display: grid;
+                align-items: center;
+                justify-content: center;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
                 background: var(--primary-color);
