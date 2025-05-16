@@ -1,0 +1,100 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.game-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.mode-btn {
+    animation: fadeIn 0.5s ease-out;
+    animation-fill-mode: both;
+}
+
+.mode-btn:nth-child(1) { animation-delay: 0.1s; }
+.mode-btn:nth-child(2) { animation-delay: 0.2s; }
+.mode-btn:nth-child(3) { animation-delay: 0.3s; }
+
+.screen {
+    animation: fadeIn 0.3s ease-out;
+}
+
+#game-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.back-btn:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Game-specific animations */
+.tictactoe-cell:hover {
+    animation: pulse 0.3s ease-in-out;
+}
+
+.snake-food {
+    animation: bounce 1s infinite;
+}
+
+.rps-choice {
+    transition: transform 0.3s ease;
+}
+
+.rps-choice:hover {
+    transform: scale(1.1);
+}
+
+/* Score animations */
+@keyframes scoreUpdate {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        color: var(--accent-color);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score-update {
+    animation: scoreUpdate 0.5s ease-out;
+} 
